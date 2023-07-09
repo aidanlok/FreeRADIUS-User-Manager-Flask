@@ -1,0 +1,13 @@
+[Unit]
+Description=FreeRADIUS Flask User Manager
+After=network.target
+
+[Service]
+User=aidan
+WorkingDirectory=/home/aidan
+ExecStart=/usr/bin/python3 /home/aidan/app.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
