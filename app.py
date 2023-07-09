@@ -69,4 +69,4 @@ def generate_file():
 
 if __name__ == '__main__':
     read_config_file()
-    app.run(debug=True)
+    app.run(host="0.0.0.0", debug=True)
