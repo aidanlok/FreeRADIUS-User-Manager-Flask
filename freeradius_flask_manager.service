@@ -3,9 +3,7 @@ Description=FreeRADIUS Flask User Manager
 After=network.target
 
 [Service]
-User=aidan
-WorkingDirectory=/home/aidan
-ExecStart=sudo /usr/bin/python3 /home/aidan/app.py
+ExecStart=/usr/bin/python3 /home/aidan/app.py
 Restart=always
 RestartSec=5
 
