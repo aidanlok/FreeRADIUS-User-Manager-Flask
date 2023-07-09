@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Management</title>
+</head>
+<body>
+    <h1>User Management</h1>
+    <table>
+        <tr>
+            <th>Username</th>
+            <th>Password</th>
+            <th>Actions</th>
+        </tr>
+        {% for username, password in users.items() %}
+        <tr>
+            <td>{{ username }}</td>
+            <td>{{ password }}</td>
+            <td>
+                <a href="/delete/{{ username }}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <h2>Add User</h2>
+    <form action="/add" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br>
+        <input type="submit" value="Add User">
+    </form>
+    <h2>Generate File</h2>
+    <a href="/generate-file">Download File</a>
+</body>
+</html>
