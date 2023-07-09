@@ -5,7 +5,7 @@ After=network.target
 [Service]
 User=aidan
 WorkingDirectory=/home/aidan
-ExecStart=/usr/bin/python3 /home/aidan/app.py
+ExecStart=sudo /usr/bin/python3 /home/aidan/app.py
 Restart=always
 RestartSec=5
 
