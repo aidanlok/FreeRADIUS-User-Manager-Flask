@@ -1,5 +1,5 @@
 # FreeRADIUS-User-Manager-Flask
-This Flask server provides an interface for managing the users allowed to authenticate through a FreeRADIUS server. This server provides a web GUI, which you can use to add and delete users. When finished editing, click the "Save Changes" button to write the configuration to disk.
+This repository contains the files required to run the FreeRADIUS user manager Flask server as described in my YouTube video.
 
 **Note: you must run this Flask server with sudo to allow the server to change the FreeRADIUS configuration, as the server needs elevated permissions to access the configuration file.**
 
