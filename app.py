@@ -56,6 +56,10 @@ def generate_file():
     file_contents = ''
     for username, password in users.items():
         file_contents += f'{username} Cleartext-Password := "{password}"\n'
+        
+    file_contents += '\nDEFAULT Framed-Protocol == PPP\n'
+    file_contents += '        Framed-Protocol = PPP,\n'
+    file_contents += '        Framed-Compression = Van-Jacobson-TCP-IP\n\n'
     file_contents += '\nDEFAULT Hint == "CSLIP"\n'
     file_contents += '        Framed-Protocol = SLIP,\n'
     file_contents += '        Framed-Compression = Van-Jacobson-TCP-IP\n\n'
