@@ -3,6 +3,8 @@ This repository contains the files required to run the FreeRADIUS user manager F
 
 **Note: you must run this Flask server with sudo to allow the server to change the FreeRADIUS configuration, as the server needs elevated permissions to access the configuration file.**
 
+**Note 2: once you edit the configuration and save, you MUST reload the FreeRADIUS service by running the command `sudo systemctl restart freeradius`.**
+
 # Files
 
 1. [app.py](./app.py)
